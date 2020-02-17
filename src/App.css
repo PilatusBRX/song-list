@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: "Courgette", cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f7f7f7;
+  font-style: italic;
+}
+
+.App {
+  background: #222222;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 700px;
+  min-height: 400px;
+  color: #eee;
+}
+
+.navbar {
+  padding: 10px 20px;
+  text-align: center;
+  background: #626262;
+}
+
+.navbar h1 {
+  margin: 10px 0;
+}
+
+.navbar p {
+  font-size: 20px;
+}
+
+.song-list {
+  margin: 20px;
+}
+
+.song-list ul {
+  padding: 0;
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+
+.song-list li {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 10px;
+
+  margin: 10px 0;
+  border-left: 2px solid orangered;
+  transition: ease all 0.4s;
+}
+
+.song-list li:hover {
+  background: #555;
+}
+
+.song-list .title {
+  color: #fff;
+  font-size: 1.2em;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.song-list .author {
+  color: #ddd;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.empty {
+  margin: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+form {
+  padding: 20px;
+
+  margin: 20px auto;
+  width: 90%;
+}
+
+input[type="text"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 6px 0;
+  background: #555;
+  color: #fff;
+  font-style: italic;
+  font-size: 16px;
+  border: 0;
+  border-left: 2px solid orangered;
+  font-family: inherit;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.358);
+  font-style: italic;
+  font-size: 16px;
+}
+
+:focus {
+  outline: none;
+}
+
+.remove-all,
+input[type="submit"] {
+  margin: 10px auto;
+  border: 0;
+  padding: 10px 20px;
+  display: block;
+  cursor: pointer;
+  background: #000;
+  transition: all ease 0.35s 0.35s;
+  border-left: 2px solid orangered;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.remove-all {
+  color: #eee;
+  margin: auto;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  width: 95%;
+
+  background: #333;
+}
+
+.remove-all:hover {
+  background-color: #fff;
+  color: orangered;
+}
+
+input[type="submit"]:hover {
+  background: orangered;
+  border-left: 2px solid #fff;
+}
+
+.clear-btn {
+  background-color: transparent;
+  border: none;
+  float: right;
+  color: #eee;
+  font-size: 16px;
+  margin-top: -32px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  color: orangered;
+}
