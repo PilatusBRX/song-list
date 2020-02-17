@@ -3,9 +3,9 @@ import { SongContext } from '../contexts/SongContext';
 import { MdDelete } from 'react-icons/md';
 
 const SongDetails = ({ song }) => {
-  const { removeSong } = useContext(SongContext);
+  const { dispatch } = useContext(SongContext);
   return (
-    <li onClick={() => removeSong(song.id)}>
+    <li onClick={() => dispatch({ type: 'REMOVE_SONG', id: song.id })}>
       <div className='title'>{song.title} </div>
       <div className='author'>
         <code>{song.singer}</code>

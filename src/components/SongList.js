@@ -4,6 +4,7 @@ import SongDetails from './SongDetails';
 
 const SongList = () => {
   const { songs } = useContext(SongContext);
+
   return songs.length ? (
     <div className='song-list'>
       <button className='remove-all'>remove all songs</button>

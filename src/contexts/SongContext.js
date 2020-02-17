@@ -1,10 +1,11 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useReducer } from 'react';
 import uuid from 'uuid/v4';
+import songReducer from '../reducers/songReducer';
 
 export const SongContext = createContext();
 
 const SongContextProvider = props => {
-  const [songs, setSongs] = useState([
+  const [songs, dispatch] = useReducer(songReducer, [
     { title: 'under pressure', singer: 'Queen', id: uuid() },
     {
       title: 'castles in the air',
@@ -15,17 +16,8 @@ const SongContextProvider = props => {
     { title: 'aquarela', singer: 'toquinho', id: uuid() }
   ]);
 
-  const addSong = (title, singer) => {
-    setSongs([...songs, { title, singer, id: uuid() }]);
-    // setSongs([...books, { title: title, singer: singer, id: uuid() }]);
-  };
-
-  const removeSong = id => {
-    setSongs(songs.filter(song => song.id !== id));
-  };
-
   return (
-    <SongContext.Provider value={{ songs, addSong, removeSong }}>
+    <SongContext.Provider value={{ songs, dispatch }}>
       {props.children}
     </SongContext.Provider>
   );

@@ -2,13 +2,19 @@ import React, { useContext, useState } from 'react';
 import { SongContext } from '../contexts/SongContext';
 
 const SongForm = () => {
-  const { addSong } = useContext(SongContext);
+  const { dispatch } = useContext(SongContext);
   const [title, setTitle] = useState('');
   const [singer, setSinger] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
-    addSong(title, singer);
+    dispatch({
+      type: 'ADD_SONG',
+      song: {
+        title,
+        singer
+      }
+    });
     setTitle('');
     setSinger('');
   };
