@@ -7,7 +7,6 @@ const SongList = () => {
 
   return songs.length ? (
     <div className='song-list'>
-      <button className='remove-all'>remove all songs</button>
       <ul>
         {songs.map(song => {
           return <SongDetails key={song.id} song={song} />;

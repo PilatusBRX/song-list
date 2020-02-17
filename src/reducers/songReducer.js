@@ -7,7 +7,7 @@ const songReducer = (state, action) => {
         ...state,
         {
           title: action.song.title,
-          singer: action.song.author,
+          singer: action.song.singer,
           id: uuid()
         }
       ];
